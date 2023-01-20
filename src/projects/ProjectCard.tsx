@@ -7,13 +7,15 @@ function formatDescription(description: string): string {
 
 interface ProjectCardProps {
     project: Project;
+    onEdit: (project: Project) => void;
 }
 
 function ProjectCard(props: ProjectCardProps) {
-    const { project } = props;
-    const handleEditClick = (projectBeingEdited: Project) => {
+    const { project, onEdit } = props;
 
-    }
+    const handleEditClick = ( projectBeingEdited: Project ) => {
+        onEdit(projectBeingEdited);
+    };
 
     return (
         <div className="card">
@@ -24,7 +26,9 @@ function ProjectCard(props: ProjectCardProps) {
                 </h5>
                 <p>{formatDescription(project.description)}</p>
                 <p>Budget : {project.budget.toLocaleString()}</p>
-                <button className=" bordered">
+                <button className=" bordered" onClick={()=>{
+                    handleEditClick(project)
+                }}>
                     <span className="icon-edit "></span>
                     Edit
                 </button>
