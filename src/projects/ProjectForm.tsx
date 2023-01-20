@@ -1,4 +1,8 @@
-function ProjectForm() {
+interface ProjectFormProps {
+    onCancel: () => void;
+}
+
+function ProjectForm({ onCancel }: ProjectFormProps) {
     return (
         <form className="input-group vertical">
             <label htmlFor="name">Project Name</label>
@@ -12,7 +16,8 @@ function ProjectForm() {
             <div className="input-group">
                 <button className="primary bordered medium">Save</button>
                 <span />
-                <button type="button" className="bordered medium">
+                <button type="button" className="bordered medium"
+                onClick={onCancel}>
                     cancel
                 </button>
             </div>
