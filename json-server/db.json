@@ -41049,7 +41049,7 @@
       "imageUrl": "/assets/placeimg_500_300_arch4.jpg",
       "contractTypeId": 3,
       "contractSignedOn": "2013-08-04T22:39:41.473Z",
-      "budget": 54637,
+      "budget": 54,
       "isActive": false
     },
     {
@@ -41059,7 +41059,7 @@
       "imageUrl": "/assets/placeimg_500_300_arch12.jpg",
       "contractTypeId": 6,
       "contractSignedOn": "2016-06-26T18:24:01.706Z",
-      "budget": 29729,
+      "budget": 297,
       "isActive": true
     },
     {
